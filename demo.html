@@ -1,0 +1,30 @@
+<div id="json_data" style="color:#000"> JSON CONTENT TO DISPLAY HERE </div>
+
+<script>
+    let jreq = new XMLHttpRequest();
+    let jurl = 'https://raw.githubusercontent.com/brihat-rb/nep_cal_data_scraper/master/2077.json';
+
+    jreq.open('GET', jurl, true);
+    jreq.onload = function() {
+        let jresponse = JSON.parse(this.response);
+        // console.log(jresponse);
+        let json_content = "";
+        for (let j = 0; j < 12; j++) {
+            for (let i = 0; i < 31; i++) {
+                if (jresponse.data[j][i]) {
+                    json_content += jresponse.data[j][i].date + "<br />&emsp; ";
+                    json_content += jresponse.data[j][i].tithi + "<br />&emsp; ";
+                    if (jresponse.data[j][i].event_one)
+                        json_content += jresponse.data[j][i].event_one + "<br />&emsp; ";
+                    if (jresponse.data[j][i].event_two)
+                        json_content += jresponse.data[j][i].event_two + "<br />&emsp; ";
+                    if (jresponse.data[j][i].event_three)
+                        json_content += jresponse.data[j][i].event_three + "<br />&emsp; ";
+                    json_content +="<hr />";
+                }
+            }
+        }
+        document.getElementById("json_data").innerHTML = json_content;
+    }
+    jreq.send();
+</script>
