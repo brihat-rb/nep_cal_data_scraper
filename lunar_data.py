@@ -151,7 +151,8 @@ if __name__ == "__main__":
                 day_dict["lunar_month"] = get_lunar_month(day_date)
                 day_dict["pakshya"] = get_pakshya(day_date)
                 out_dict[day_date] = [day_dict["lunar_month"], day_dict["pakshya"]]
-
+                # out_dict[day_date] = [day_dict["lunar_month"], day_dict["pakshya"], day_dict["tithi"]]
+				
                 # print(day_date),
                 # print("\t"),
                 # print(get_lunar_month(day_date))
