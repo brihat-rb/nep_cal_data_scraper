@@ -2,7 +2,7 @@
 
 <script>
     let jdetailreq = new XMLHttpRequest();
-    let jdetailurl = 'https://raw.githubusercontent.com/brihat-rb/nep_cal_data_scraper/master/2077_detailed.json';
+    let jdetailurl = 'https://raw.githubusercontent.com/brihat-rb/brihat-rb.github.io/master/calendar/data/2078_detailed.json';
 
     jdetailreq.open('GET', jdetailurl, true);
     jdetailreq.onload = function() {
@@ -14,12 +14,12 @@
                 if (jdetailresponse.data[j][i]) {
                     json_content += jdetailresponse.data[j][i].date + "<br />&emsp; ";
                     json_content += jdetailresponse.data[j][i].lunar_month + " ( " + jdetailresponse.data[j][i].pakshya + " ) " + jdetailresponse.data[j][i].tithi + "<br />&emsp; ";
-                    if (jdetailresponse.data[j][i].event_one)
-                        json_content += jdetailresponse.data[j][i].event_one + "<br />&emsp; ";
-                    if (jdetailresponse.data[j][i].event_two)
-                        json_content += jdetailresponse.data[j][i].event_two + "<br />&emsp; ";
-                    if (jdetailresponse.data[j][i].event_three)
-                        json_content += jdetailresponse.data[j][i].event_three + "<br />&emsp; ";
+                    if (jdetailresponse.data[j][i].lunar_event_one)
+                        json_content += "<div class='event1' style='color: green;'>" +jdetailresponse.data[j][i].lunar_event_one + "</div><br />&emsp; ";
+                    if (jdetailresponse.data[j][i].lunar_event_two)
+                        json_content += "<div class='event2' style='color: green;'>" +jdetailresponse.data[j][i].lunar_event_two + "</div><br />&emsp; ";
+                    if (jdetailresponse.data[j][i].lunar_event_three)
+                        json_content += "<div class='event3' style='color: green;'>" +jdetailresponse.data[j][i].lunar_event_three + "</div><br />&emsp; ";
                     json_content +="<hr />";
                 }
             }
