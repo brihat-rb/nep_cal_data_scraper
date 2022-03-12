@@ -1,8 +1,8 @@
 from scraper.scraper import Scraper
 import json
 
-OUT_FILE = "2077.json"
-YEAR = 2077
+OUT_FILE = "2079.json"
+YEAR = 2079
 
 if __name__ == "__main__":
     all_data = []
@@ -15,6 +15,7 @@ if __name__ == "__main__":
 
     nep_cal_json = {
         "year": YEAR,
+        "author": "Brihat Ratna Bajracharya (brihatbajracharya@gmail.com)", 
         "data": all_data
     }
 
