@@ -3,10 +3,10 @@
 
 import json
 
-YEAR = 2078
-IN_FILE_1 = "2078.json"
-IN_FILE_2 = "2078_lunar_data.json"
-OUT_FILE = "2078_detailed.json"
+YEAR = 2079
+IN_FILE_1 = "2079.json"
+IN_FILE_2 = "2079_lunar_data.json"
+OUT_FILE = "2079_detailed.json"
 
 
 if __name__ == "__main__":
@@ -29,10 +29,10 @@ if __name__ == "__main__":
             try:
                 day_dict = in_file1_data["data"][month][day]
                 day_date = day_dict["date"]
-                day_dict["lunar_month"] = in_file2_data["2078-" + str(month + 1).zfill(2) + "-" + str(day + 1).zfill(2)][0]
-                day_dict["pakshya"] = in_file2_data["2078-" + str(month + 1).zfill(2) + "-" + str(day + 1).zfill(2)][1]
-                day_dict["tithi"] = in_file2_data["2078-" + str(month + 1).zfill(2) + "-" + str(day + 1).zfill(2)][2]
-                day_dict["ns_year"] = in_file2_data["2078-" + str(month + 1).zfill(2) + "-" + str(day + 1).zfill(2)][3]
+                day_dict["lunar_month"] = in_file2_data["2079-" + str(month + 1).zfill(2) + "-" + str(day + 1).zfill(2)][0]
+                day_dict["pakshya"] = in_file2_data["2079-" + str(month + 1).zfill(2) + "-" + str(day + 1).zfill(2)][1]
+                day_dict["tithi"] = in_file2_data["2079-" + str(month + 1).zfill(2) + "-" + str(day + 1).zfill(2)][2]
+                day_dict["ns_year"] = in_file2_data["2079-" + str(month + 1).zfill(2) + "-" + str(day + 1).zfill(2)][3]
 
                 out_data["data"][month].append(day_dict)
                 # print(out_data)
@@ -41,3 +41,6 @@ if __name__ == "__main__":
 
     with open(OUT_FILE, 'w') as file:
         json.dump(out_data, file)
+
+# In Command Prompt
+# json.load(open("2079_detailed.json","r"))
