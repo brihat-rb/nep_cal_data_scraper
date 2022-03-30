@@ -30,48 +30,50 @@ def get_lunar_month(date):
         return lunar_month_list[2]
     elif date_month == 2 and (date_day >= 3 and date_day <= 16):
         return lunar_month_list[3]
-    elif date_month == 2 and (date_day >= 17 and date_day <= 31) or (date_month == 3 and (date_day >= 1 and date_day <= 15)):
+    elif date_month == 2 and (date_day >= 17 and date_day <= 31):
         return lunar_month_list[4]
-    elif date_month == 3 and (date_day >= 16 and date_day <= 29):
+    elif date_month == 3 and (date_day >= 1 and date_day <= 15):
         return lunar_month_list[5]
-    elif date_month == 3 and (date_day >= 30 and date_day <= 32) or (date_month == 4 and (date_day >= 1 and date_day <= 12)):
+    elif date_month == 3 and (date_day >= 16 and date_day <= 29):
         return lunar_month_list[6]
-    elif date_month == 4 and (date_day >= 13 and date_day <= 27):
+    elif (date_month == 3 and (date_day >= 30 and date_day <= 32)) or (date_month == 4 and (date_day >= 1 and date_day <= 12)):
         return lunar_month_list[7]
-    elif date_month == 4 and (date_day >= 28 and date_day <= 31) or (date_month == 5 and (date_day >= 1 and date_day <= 11)):
+    elif date_month == 4 and (date_day >= 13 and date_day <= 27):
         return lunar_month_list[8]
-    elif date_month == 5 and (date_day >= 12 and date_day <= 25):
+    elif (date_month == 4 and (date_day >= 28 and date_day <= 31)) or (date_month == 5 and (date_day >= 1 and date_day <= 11)):
         return lunar_month_list[9]
-    elif date_month == 5 and (date_day >= 26 and date_day <= 31) or (date_month == 6 and (date_day >= 1 and date_day <= 9)):
+    elif date_month == 5 and (date_day >= 12 and date_day <= 25):
         return lunar_month_list[10]
-    elif date_month == 6 and (date_day >= 10 and date_day <= 23):
+    elif (date_month == 5 and (date_day >= 26 and date_day <= 31)) or (date_month == 6 and (date_day >= 1 and date_day <= 9)):
         return lunar_month_list[11]
-    elif date_month == 6 and (date_day >= 24 and date_day <= 31) or (date_month == 7 and (date_day >= 1 and date_day <= 8)):
+    elif date_month == 6 and (date_day >= 10 and date_day <= 23):
         return lunar_month_list[12]
-    elif date_month == 7 and (date_day >= 9 and date_day <= 22):
+    elif (date_month == 6 and (date_day >= 24 and date_day <= 31)) or (date_month == 7 and (date_day >= 1 and date_day <= 8)):
         return lunar_month_list[13]
-    elif date_month == 7 and (date_day >= 23 and date_day <= 30) or (date_month == 8 and (date_day >= 1 and date_day <= 7)):
+    elif date_month == 7 and (date_day >= 9 and date_day <= 22):
         return lunar_month_list[14]
-    elif date_month == 8 and (date_day >= 8 and date_day <= 22):
+    elif (date_month == 7 and (date_day >= 23 and date_day <= 30)) or (date_month == 8 and (date_day >= 1 and date_day <= 7)):
         return lunar_month_list[15]
-    elif date_month == 8 and (date_day >= 23 and date_day <= 29) or (date_month == 9 and (date_day >= 1 and date_day <= 8)):
+    elif date_month == 8 and (date_day >= 8 and date_day <= 22):
         return lunar_month_list[16]
-    elif date_month == 9 and (date_day >= 9 and date_day <= 22):
+    elif (date_month == 8 and (date_day >= 23 and date_day <= 29)) or (date_month == 9 and (date_day >= 1 and date_day <= 8)):
         return lunar_month_list[17]
-    elif date_month == 9 and (date_day >= 23 and date_day <= 30) or (date_month == 10 and (date_day >= 1 and date_day <= 7)):
+    elif date_month == 9 and (date_day >= 9 and date_day <= 22):
         return lunar_month_list[18]
-    elif date_month == 10 and (date_day >= 8 and date_day <= 22):
+    elif (date_month == 9 and (date_day >= 23 and date_day <= 30)) or (date_month == 10 and (date_day >= 1 and date_day <= 7)):
         return lunar_month_list[19]
-    elif date_month == 10 and (date_day >= 23 and date_day <= 29) or (date_month == 11 and (date_day >= 1 and date_day <= 8)):
+    elif date_month == 10 and (date_day >= 8 and date_day <= 22):
         return lunar_month_list[20]
-    elif date_month == 11 and (date_day >= 9 and date_day <= 23):
+    elif (date_month == 10 and (date_day >= 23 and date_day <= 29)) or (date_month == 11 and (date_day >= 1 and date_day <= 8)):
         return lunar_month_list[21]
-    elif date_month == 11 and (date_day >= 24 and date_day <= 30) or (date_month == 12 and (date_day >= 1 and date_day <= 7)):
+    elif date_month == 11 and (date_day >= 9 and date_day <= 23):
         return lunar_month_list[22]
-    elif date_month == 12 and (date_day >= 8 and date_day <= 23):
+    elif (date_month == 11 and (date_day >= 24 and date_day <= 30)) or (date_month == 12 and (date_day >= 1 and date_day <= 7)):
         return lunar_month_list[23]
-    elif date_month == 12 and (date_day >= 24 and date_day <= 30):
+    elif date_month == 12 and (date_day >= 8 and date_day <= 23):
         return lunar_month_list[24]
+    elif date_month == 12 and (date_day >= 24 and date_day <= 30):
+        return lunar_month_list[25]
     return date + " undefined lunar month"
 
 
@@ -89,48 +91,50 @@ def get_pakshya(date):
         return pakshya_list[2]
     elif date_month == 2 and (date_day >= 3 and date_day <= 16):
         return pakshya_list[3]
-    elif date_month == 2 and (date_day >= 17 and date_day <= 31) or (date_month == 3 and (date_day >= 1 and date_day <= 15)):
+    elif date_month == 2 and (date_day >= 17 and date_day <= 31):
         return pakshya_list[4]
-    elif date_month == 3 and (date_day >= 16 and date_day <= 29):
+    elif date_month == 3 and (date_day >= 1 and date_day <= 15):
         return pakshya_list[5]
-    elif date_month == 3 and (date_day >= 30 and date_day <= 32) or (date_month == 4 and (date_day >= 1 and date_day <= 12)):
+    elif date_month == 3 and (date_day >= 16 and date_day <= 29):
         return pakshya_list[6]
-    elif date_month == 4 and (date_day >= 13 and date_day <= 27):
+    elif (date_month == 3 and (date_day >= 30 and date_day <= 32)) or (date_month == 4 and (date_day >= 1 and date_day <= 12)):
         return pakshya_list[7]
-    elif date_month == 4 and (date_day >= 28 and date_day <= 31) or (date_month == 5 and (date_day >= 1 and date_day <= 11)):
+    elif date_month == 4 and (date_day >= 13 and date_day <= 27):
         return pakshya_list[8]
-    elif date_month == 5 and (date_day >= 12 and date_day <= 25):
+    elif (date_month == 4 and (date_day >= 28 and date_day <= 31)) or (date_month == 5 and (date_day >= 1 and date_day <= 11)):
         return pakshya_list[9]
-    elif date_month == 5 and (date_day >= 26 and date_day <= 31) or (date_month == 6 and (date_day >= 1 and date_day <= 9)):
+    elif date_month == 5 and (date_day >= 12 and date_day <= 25):
         return pakshya_list[10]
-    elif date_month == 6 and (date_day >= 10 and date_day <= 23):
+    elif (date_month == 5 and (date_day >= 26 and date_day <= 31)) or (date_month == 6 and (date_day >= 1 and date_day <= 9)):
         return pakshya_list[11]
-    elif date_month == 6 and (date_day >= 24 and date_day <= 31) or (date_month == 7 and (date_day >= 1 and date_day <= 8)):
+    elif date_month == 6 and (date_day >= 10 and date_day <= 23):
         return pakshya_list[12]
-    elif date_month == 7 and (date_day >= 9 and date_day <= 22):
+    elif (date_month == 6 and (date_day >= 24 and date_day <= 31)) or (date_month == 7 and (date_day >= 1 and date_day <= 8)):
         return pakshya_list[13]
-    elif date_month == 7 and (date_day >= 23 and date_day <= 30) or (date_month == 8 and (date_day >= 1 and date_day <= 7)):
+    elif date_month == 7 and (date_day >= 9 and date_day <= 22):
         return pakshya_list[14]
-    elif date_month == 8 and (date_day >= 8 and date_day <= 22):
+    elif (date_month == 7 and (date_day >= 23 and date_day <= 30)) or (date_month == 8 and (date_day >= 1 and date_day <= 7)):
         return pakshya_list[15]
-    elif date_month == 8 and (date_day >= 23 and date_day <= 29) or (date_month == 9 and (date_day >= 1 and date_day <= 8)):
+    elif date_month == 8 and (date_day >= 8 and date_day <= 22):
         return pakshya_list[16]
-    elif date_month == 9 and (date_day >= 9 and date_day <= 22):
+    elif (date_month == 8 and (date_day >= 23 and date_day <= 29)) or (date_month == 9 and (date_day >= 1 and date_day <= 8)):
         return pakshya_list[17]
-    elif date_month == 9 and (date_day >= 23 and date_day <= 30) or (date_month == 10 and (date_day >= 1 and date_day <= 7)):
+    elif date_month == 9 and (date_day >= 9 and date_day <= 22):
         return pakshya_list[18]
-    elif date_month == 10 and (date_day >= 8 and date_day <= 22):
+    elif (date_month == 9 and (date_day >= 23 and date_day <= 30)) or (date_month == 10 and (date_day >= 1 and date_day <= 7)):
         return pakshya_list[19]
-    elif date_month == 10 and (date_day >= 23 and date_day <= 29) or (date_month == 11 and (date_day >= 1 and date_day <= 8)):
+    elif date_month == 10 and (date_day >= 8 and date_day <= 22):
         return pakshya_list[20]
-    elif date_month == 11 and (date_day >= 9 and date_day <= 23):
+    elif (date_month == 10 and (date_day >= 23 and date_day <= 29)) or (date_month == 11 and (date_day >= 1 and date_day <= 8)):
         return pakshya_list[21]
-    elif date_month == 11 and (date_day >= 24 and date_day <= 30) or (date_month == 12 and (date_day >= 1 and date_day <= 7)):
+    elif date_month == 11 and (date_day >= 9 and date_day <= 23):
         return pakshya_list[22]
-    elif date_month == 12 and (date_day >= 8 and date_day <= 23):
+    elif (date_month == 11 and (date_day >= 24 and date_day <= 30)) or (date_month == 12 and (date_day >= 1 and date_day <= 7)):
         return pakshya_list[23]
-    elif date_month == 12 and (date_day >= 24 and date_day <= 30):
+    elif date_month == 12 and (date_day >= 8 and date_day <= 23):
         return pakshya_list[24]
+    elif date_month == 12 and (date_day >= 24 and date_day <= 30):
+        return pakshya_list[25]
     return date + " undefined pakshya"
 
 def get_nepal_sambat(date):
