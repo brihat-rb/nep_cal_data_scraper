@@ -1,8 +1,8 @@
 from scraper.scraper import Scraper
 import json
 
-OUT_FILE = "2079.json"
-YEAR = 2079
+OUT_FILE = "2080.json"
+YEAR = 2080
 
 if __name__ == "__main__":
     all_data = []
