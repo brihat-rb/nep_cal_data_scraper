@@ -40,9 +40,12 @@ class Scraper:
                 self.nepali_calendar_data.append({
                     "date": date_string,
                     "tithi": day[0],
-                    "lunar_event_one": day[1],
-                    "lunar_event_two": day[2],
-                    "lunar_event_three": day[3]
+                    # "lunar_event_one": day[1],
+                    # "lunar_event_two": day[2],
+                    # "lunar_event_three": day[3],
+                    "lunar_event_one": "",
+                    "lunar_event_two": "",
+                    "lunar_event_three": ""
                 })
 
-        return self.nepali_calendar_data
+        return self.nepali_calendar_data.encode('utf-8')
