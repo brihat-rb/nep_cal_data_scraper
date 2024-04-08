@@ -42,7 +42,10 @@ if __name__ == "__main__":
                 day_pakshya = day_dict["lunar_month"]
                 day_tithi = day_dict["tithi"]
                 day_event_list = in_file2_data[day_pakshya][day_tithi]
-                bs_event_list = in_file3_data["data"][bs_event_key]
+                try:
+                    bs_event_list = in_file3_data["data"][bs_event_key]
+                except:
+                    bs_event_list = []
                 day_event_list.extend(bs_event_list)
                 # print(day_event_list)
                 # print(len(day_event_list))
@@ -83,7 +86,7 @@ if __name__ == "__main__":
                     day_dict["lunar_event_one"] = day_event_list[0] + " / " + day_event_list[1] + " / " + day_event_list[2]
                     day_dict["lunar_event_two"] = day_event_list[3] + " / " + day_event_list[4] + " / " + day_event_list[5]
                     day_dict["lunar_event_three"] = day_event_list[6] + " / " + day_event_list[7] + " / " + day_event_list[8]
-                elif (day_event_list_length == 8):
+                elif (day_event_list_length == 10):
                     day_dict["lunar_event_one"] = day_event_list[0] + " / " + day_event_list[1] + " / " + day_event_list[2]
                     day_dict["lunar_event_two"] = day_event_list[3] + " / " + day_event_list[4] + " / " + day_event_list[5]
                     day_dict["lunar_event_three"] = day_event_list[6] + " / " + day_event_list[7] + " / " + day_event_list[8] + " / " + day_event_list[9]
@@ -93,8 +96,9 @@ if __name__ == "__main__":
                     pass
                     
                 out_data["data"][month].append(day_dict)
-            except:
-                # print("here", month, day)
+            except Exception as error:
+                print("hereः", month, day)
+                print(error)
                 pass
 
     with open(OUT_FILE, 'w') as file:
